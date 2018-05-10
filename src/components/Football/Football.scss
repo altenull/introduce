@@ -1,0 +1,104 @@
+@import 'utils';
+
+%student-info {
+  height: 250px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include material-shadow(3);
+}
+
+%english-name {
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  line-height: 3rem;
+  border-top: 2px solid lighten(#FEC000, 30%);
+  border-bottom: 2px solid lighten(#FEC000, 30%);
+  color: #343a40;
+  margin-bottom: 2rem;
+  transition: all .2s ease-in;
+};
+
+%period {
+  font-size: 1rem;
+  color: #868e96;
+};
+
+%img {
+  width: 300px;
+  height: 300px;
+  margin-top: -25px;
+  z-index: 40;
+  transition: all .2s ease-in;
+  @include material-shadow(3);
+}
+
+.wrapper {
+  width: 700px;
+  height: 300px;
+  margin-left: -50px;
+  background: rgba(darken(#FEC000, 5%), .85);
+  cursor: pointer;
+  transition: all .2s ease-in;
+  z-index: 40;
+  @include material-shadow(4);
+  & + & {
+    margin-top: calc(50vh);
+  }
+  .student-info-container {
+    display: flex;
+    margin-left: -25px;
+    margin-top: -25px;
+    .student-info {
+      width: 400px;
+      @extend %student-info;
+      .english-name {
+        @extend %english-name;
+      }
+      .period {
+        @extend %period;
+      }
+    }
+    img {
+      @extend %img;
+    }
+  }
+  .student-info-container-reverse {
+    display: flex;
+    margin-left: 25px;
+    margin-right: -25px;
+    margin-top: 75px;
+    img {
+      @extend %img;
+    }
+    .student-info-reverse {
+      width: 425px;
+      margin-top: -50px;
+      margin-left: -25px;
+      @extend %student-info;
+      .english-name-reverse {
+        @extend %english-name;
+      }
+      .period-reverse {
+        @extend %period;
+      }
+    }
+  }
+  // wrapper hover event
+  &:hover {
+    background: rgba(#FEC000, .85);
+    .student-info-container {
+      img {
+        filter: grayscale(0%);
+      }
+    }
+    .student-info-container-reverse {
+      img {
+        filter: grayscale(0%);
+      }
+    }
+  }
+}

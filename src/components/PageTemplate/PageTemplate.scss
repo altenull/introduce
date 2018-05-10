@@ -1,0 +1,34 @@
+%background-text {
+  position: fixed;
+  font-size: 5rem;
+  font-weight: 700;
+  color: rgba(#f9f9f9, .4);
+  user-select: none;
+  z-index: 50;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  background: #ced4da;
+  margin: 1rem;
+  padding-top: 5rem;
+  .background-text-top {
+    left: -5px;
+    top: -30px;
+    @extend %background-text;
+  }
+  .background-text-bottom {
+    right: -5px;
+    bottom: -30px;
+    @extend %background-text;
+  }
+  .template {
+    margin: 5rem 0;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    main {
+      width: 600px;
+      z-index: 20;
+    }
+  }
+}
