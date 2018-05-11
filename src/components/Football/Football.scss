@@ -1,6 +1,6 @@
 @import 'utils';
 
-%student-info {
+%info {
   height: 250px;
   background: white;
   display: flex;
@@ -11,19 +11,19 @@
 }
 
 %english-name {
-  font-size: 1.65rem;
+  font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 2.5px;
-  line-height: 3rem;
-  border-top: 2px solid lighten(#FEC000, 30%);
-  border-bottom: 2px solid lighten(#FEC000, 30%);
+  line-height: 3.8rem;
+  border-top: 3px solid lighten(#20C997, 30%);
+  border-bottom: 3px solid lighten(#20C997, 30%);
   color: #343a40;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   transition: all .2s ease-in;
 };
 
-%period {
-  font-size: 1rem;
+%korean-name {
+  font-size: 1.5rem;
   color: #868e96;
 };
 
@@ -40,33 +40,30 @@
   width: 700px;
   height: 300px;
   margin-left: -50px;
-  background: rgba(darken(#FEC000, 5%), .85);
+  background: rgba(darken(#20C997, 5%), .85);
   cursor: pointer;
   transition: all .2s ease-in;
   z-index: 40;
   @include material-shadow(4);
-  & + & {
-    margin-top: calc(50vh);
-  }
-  .student-info-container {
+  .info-container {
     display: flex;
     margin-left: -25px;
     margin-top: -25px;
-    .student-info {
+    .info {
       width: 400px;
-      @extend %student-info;
+      @extend %info;
       .english-name {
         @extend %english-name;
       }
-      .period {
-        @extend %period;
+      .korean-name {
+        @extend %korean-name;
       }
     }
     img {
       @extend %img;
     }
   }
-  .student-info-container-reverse {
+  .info-container-reverse {
     display: flex;
     margin-left: 25px;
     margin-right: -25px;
@@ -74,28 +71,28 @@
     img {
       @extend %img;
     }
-    .student-info-reverse {
+    .info-reverse {
       width: 425px;
       margin-top: -50px;
       margin-left: -25px;
-      @extend %student-info;
+      @extend %info;
       .english-name-reverse {
         @extend %english-name;
       }
-      .period-reverse {
-        @extend %period;
+      .korean-name-reverse {
+        @extend %korean-name;
       }
     }
   }
   // wrapper hover event
   &:hover {
-    background: rgba(#FEC000, .85);
-    .student-info-container {
+    background: rgba(#20C997, .85);
+    .info-container {
       img {
         filter: grayscale(0%);
       }
     }
-    .student-info-container-reverse {
+    .info-container-reverse {
       img {
         filter: grayscale(0%);
       }

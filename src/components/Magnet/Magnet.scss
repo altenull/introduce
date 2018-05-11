@@ -1,0 +1,83 @@
+@import 'utils';
+
+%info {
+  height: 250px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include material-shadow(3);
+}
+
+%english-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  line-height: 3.8rem;
+  border-top: 3px solid lighten(#fcc419, 30%);
+  border-bottom: 3px solid lighten(#fcc419, 30%);
+  color: #343a40;
+  margin-bottom: 4rem;
+  transition: all .2s ease-in;
+};
+
+%korean-name {
+  font-size: 1.5rem;
+  color: #868e96;
+};
+
+%img {
+  width: 300px;
+  height: 300px;
+  margin-top: -25px;
+  z-index: 40;
+  transition: all .2s ease-in;
+  @include material-shadow(3);
+}
+
+.wrapper {
+  width: 700px;
+  height: 300px;
+  margin-left: -50px;
+  background: rgba(darken(#fcc419, 5%), .85);
+  cursor: pointer;
+  transition: all .2s ease-in;
+  z-index: 40;
+  @include material-shadow(4);
+  .info-container-reverse {
+    display: flex;
+    margin-left: 25px;
+    margin-right: -25px;
+    margin-top: 75px;
+    img {
+      @extend %img;
+    }
+    .info-reverse {
+      width: 425px;
+      margin-top: -50px;
+      margin-left: -25px;
+      @extend %info;
+      .english-name-reverse {
+        @extend %english-name;
+      }
+      .korean-name-reverse {
+        @extend %korean-name;
+      }
+    }
+  }
+  // wrapper hover event
+  &:hover {
+    background: rgba(#fcc419, .85);
+    .info-container {
+      img {
+        filter: grayscale(0%);
+      }
+    }
+    .info-container-reverse {
+      img {
+        filter: grayscale(0%);
+      }
+    }
+  }
+}

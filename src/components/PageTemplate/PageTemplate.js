@@ -3,6 +3,8 @@ import styles from './PageTemplate.scss';
 import classNames from 'classnames/bind';
 import Header from 'components/Header';
 import Football from 'components/Football';
+import Spacer from 'components/Spacer';
+import Magnet from 'components/Magnet';
 
 const cx = classNames.bind(styles);
 
@@ -13,29 +15,10 @@ const PageTemplate = () => {
       <div className={cx('background-text-bottom')}>헌영</div>
       <div className={cx('template')}>
         <Header />
-        <Football />
         <main>
-          ㅎㅎㅎ
-          <br />
-          ㅎㅎㅎ
-          <br />
-          ㅎㅎㅎ
-          <br />ㅎㅎㅎ
-          <br />ㅎㅎㅎ
-          <br />
-          ㅎㅎㅎ
-          <br />
-          ㅎㅎㅎ
-          <br />
-          ㅎㅎㅎ
-          <br />ㅎㅎㅎ
-          <br />
-          ㅎㅎㅎ
-          <br />
-
-
-
-
+          <Football />
+          <Spacer />
+          <Magnet />
         </main>
       </div>
     </div>

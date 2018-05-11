@@ -26,9 +26,14 @@
   .template {
     margin: 5rem 0;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background: #343A40;
     main {
       width: 600px;
       z-index: 20;
+      background: #343A40;
+      & + & {
+        margin-top: 50vh;
+      }
     }
   }
 }
