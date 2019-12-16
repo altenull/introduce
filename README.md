@@ -1,3 +1,3 @@
 # introduce
 
-> just for introduce myself.
+> Introducing myself to Awair.
